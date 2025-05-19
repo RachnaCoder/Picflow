@@ -1,0 +1,19 @@
+
+<a href="/feed" class="back-home">Back to Home</a>
+ 
+<h2>Posts in "<%= category %>"</h2>
+
+<% if(posts && posts.length > 0){ %>
+  <% posts.forEach(post => { %>
+    <div class="card">
+      <img src="/images/uploads/<%= post.image %>"alt="" />
+      <p><%= post.postText %></p>
+    </div> 
+
+  <% }) %>
+<% } else {%>
+
+  <p>No posts found for this category.</p>
+<% } %>
+
+

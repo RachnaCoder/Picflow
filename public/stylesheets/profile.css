@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    min-height: 100vh;
+     /* background: #1c1c1c;  */
+     background:rgb(216, 215, 215); 
+  }
+
+  .containerpers {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center content */
+    gap: 20px; /* Add some space between profile and card */
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}*/
+
+.card:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  transition: all 0.2s ease-in-out;
+} 
+
+
+/* for testing */
+
+ .container {
+    text-align: center;
+}  */
+
+  .flex{
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+align-items: start;
+}  
+
+ 
+  .carders {
+    margin-top: 5px;
+    padding-top: 0px;
+    position: relative;
+    width: 1000px;
+    height: 390px;
+    background: #dadada;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    margin-left: 30px;
+
+  } 
+
+ .pencil-container{
+width: 30px;
+height: 30px;
+right: 0;
+bottom: 0;
+position: absolute;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgb(199, 193, 193); 
+}
+ 
+.pencil-icon {
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  color: black; /* or any visible color */
+}
+
+
+  .carders .imgBx {
+    position: relative;
+    width: 110px; /*  100% */
+    height: 110px;
+    padding: 0px;
+    z-index: 1;
+    padding-top: 0;
+    margin-bottom:8px;
+    margin-top: 0px;
+    margin-left: 430px;
+  }
+  
+  .carders .imgBx img {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #272727;
+    overflow: hidden;
+    object-fit: cover;
+  }
+  
+  
+  
+  .carders .content {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    z-index: 1;
+  }
+  
+  .carders .content .details {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .carders .content .details h2 {
+    font-size: 0.5 em;
+    font-weight: 500;
+    color: #0f0f0f;
+    line-height: 1.0 em;
+    margin-top: 1.5px;
+  }
+  
+  .carders .content .details h2 span {
+    font-size: 0.5 em;
+    font-weight: 300;
+    color: #fff;
+    opacity: 0.75;
+  }
+  
+  .carders .content .details .data {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 0 30px;
+  }
+  
+  .carders .content .details .data h3 {
+    font-size: 1.1em;
+    color: #0f0f0f;
+    line-height: 1.2em;
+    font-weight: 600;
+  }
+  
+  .carders .content .details .data h3 span {
+    font-size: 0.65em;
+    font-weight: 400;
+    color: #131313;
+    opacity: 0.75;
+  }
+  
+  .button{
+    background-color:#f30d19; 
+    padding :8px;
+    color:black;
+    text-decoration: none;
+    border-radius: 5px;
+    border-color: #000000c6;
+    width: 60%;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+ 
+  .button:hover{
+    background-color: #c30812;;
+  }
+  .carders .content .details .actionbtn {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 30px;
+
+  }
+  
+  .carders .content .details .actionBtn button {
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    background: #df0812;
+    color: #0f0f0f;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.3s;
+    
+  }
+  
+  .carders .content .details .actionBtn button:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  
+  
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: start;
+    justify-content: center;
+  }
+  .card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: white;
+    margin: 10px;
+    margin-top: 10px;
+    
+  }
+
+  .card {
+    width: 25rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .card-img-top {
+    height: 250px; /* or any fixed height you prefer */
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  .card-body{
+    height: 15px;
+  }
+  
+  .home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 10px;
+    padding-left:20px;
+  }
+  
+
+  .home i {
+    font-size: 1.0rem;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Hover effect */
+  .home i:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.15);
+    color: #0a0a0a;
+  }
+  
+  .menu-icon{
+    width: 30px;
+height: 30px;
+right: 0;
+bottom: 0;
+position: absolute;
+display: flex;
+align-items: center;
+justify-content: center;
+  }
+
+  .menu-icon i{
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    color: black; 
+
+  }
+  
+  

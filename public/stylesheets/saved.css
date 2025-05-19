@@ -1,0 +1,40 @@
+.saved-container{
+
+	display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: start;
+    justify-content: center;
+    margin-top:40px;
+}
+
+.card{
+	border: 1px solid #ddd;
+    background: white;
+    margin: 20px;
+    margin-top: 10px;
+	width: 20rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    
+    
+  }
+.saved-img{
+	height: 450px; /* or any fixed height you prefer */
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.card-body{
+	font-size: 25px;
+	height: 25px;
+}
+
+h2{
+font-size: 40px;
+margin-left: 40%;
+margin-top: 40px;
+
+}

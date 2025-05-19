@@ -1,0 +1,118 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>project</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel ="stylesheet" href = "/stylesheets/profile.css"/>
+  </head>
+  <body>
+
+    <a href="/feed" title="Go to Home Page">
+      <div class="home">
+        <span class="home-icon">
+          <i class="ri-home-4-fill"></i>
+        </span>
+      </div>
+    </a>
+    
+
+    <div class="containerpers">
+    <div class="carders">
+      
+      
+
+
+    <!-- for changing profile image -->
+     
+    <div class="imgBx">
+      <!-- Hidden form to handle file upload -->
+      <form  id ="uploadform"  hidden action="/uploadprofile" method="post" enctype="multipart/form-data">
+        <input type="file" name="image"/>
+      </form>
+      
+      <img src="/images/uploads/posts/<%=user.profileImage %>" alt="">
+
+        <span id ="uploadicon" class="pencil-container" title = "Edit profile photo">
+            <i class="ri-pencil-line pencil-icon"></i>
+        </span>
+    </div>
+    
+
+      <div class="content">
+        <div class="details">
+          <h2><%=user.fullName %></h2>
+          <h2>@<%=user.username%></h2>
+          <h3>Lorem ipsum dolor sit, amet </h3>
+          <h3> Lorem ipsum dolor sit amet consectetur </h3>
+          <a href="/logout"class="button"> Logout</a>
+
+  <form action ="/upload" method ="post" enctype = "multipart/form-data"><br>
+    <input type = "text" name ="text" placeholder="some caption">
+    <input type = "text" name ="Category" placeholder="category">
+
+    <input type="file" name="file"> 
+  <button type="submit" required>upload</button>
+  </form> 
+      
+      </div>
+    </div>
+</div>
+
+    <div class="container">
+      <div class="cards flex">
+<% user.posts.forEach(function(post){ %>
+  <div class="card"style="width: 18rem;">
+    <img src="/images/uploads/posts/<%= post.image %>" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= post.postText  %> </h5>
+      <span id ="menu" class="menu-icon">
+        <i class="ri-align-justify"></i></span>
+    </div>
+  </div>
+
+
+<% }) %>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+    <script>
+document.querySelector("#uploadicon").addEventListener("click", function () {
+  document.querySelector("#uploadform input").click();
+})
+
+document.querySelector("#uploadform  input").addEventListener("change",function(){
+  document.querySelector("#uploadform").submit();
+
+})
+</script>
+
+
+    
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
