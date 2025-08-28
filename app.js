@@ -16,14 +16,12 @@ app.set('view engine', 'ejs');
 
 
 app.use(flash());
+
 app.use(expressSession({
   resave : false,
   saveUninitialized:false,
   secret:"ha ha"
 }))
-
-
-
 app.use(passport.initialize());
 app.use(passport.session());
 passport.serializeUser(usersRouter.serializeUser());

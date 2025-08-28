@@ -1,8 +1,4 @@
 
-         
-       
-   
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,22 +16,6 @@
   </div>
 
   
-  <div class="search">
-    <i class="fas fa-search"></i>
-    <form action="/search-category" method="GET" id ="searchForm">
-      <input
-        type="text"
-        name="category"
-        id ="searchInput"
-        placeholder="Search anything"
-        required
-      />
-    </form>
-    
-    </div>
-
-
-
   <div class="right">
     <a href="/saved-posts" class="items" title = "Saved posts"><i class="fas fa-save"></i>
     </a>
@@ -49,31 +29,14 @@
   </div>
 
 
-
-
-  <!-- <div class="post-container">
-    <% posts.forEach(function(post) { %>
-      <div class="card">
-        <img src="/images/uploads/<%= post.image %>" class ="feed-img" alt="post image" style="max-width: 100%;">
-        <div class="card-body">
-          <h5><%= post.postText %></h5>
-          <p>Posted by @<%= post.user.username %></p>  shows poster username 
-        </div>
-      </div>
-    <% }) %>
-  </div> -->
-
  <!-- for save button and download -->
   
-
   <div class="post-container">
     <% posts.forEach(function(post){ %>
       <div class="card">
         <div class="img-wrapper">
           <img src="/images/uploads/posts/<%= post.image %>" class="feed-img" alt="post image" />
           
-
-
 
           <div class="upper">
           <div class="hover-buttons">
@@ -92,22 +55,6 @@
       </div>
     <% }) %>
   </div>
-  
-
-
-
-
-
-  <script>
-    document.getElementById('searchForm').addEventListener('submit', function(e) {
-      e.preventDefault(); // prevent the form from submitting normally
-  
-      const input = document.getElementById('searchInput').value.trim().toLowerCase();
-      if (input) {
-        window.location.href = `/category/${encodeURIComponent(input)}`;
-      }
-    });
-  </script>
   
 </body>
 </html>
