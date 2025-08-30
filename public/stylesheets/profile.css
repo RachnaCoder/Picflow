@@ -13,7 +13,7 @@
     /* align-items: center; */
     min-height: 100vh;
      /* background: #1c1c1c;  */
-     background:rgb(216, 215, 215); 
+     background:rgb(206, 199, 199); 
   }
 
   .containerpers {
@@ -31,6 +31,7 @@
   font-size: 1rem;
   color: #333;
   margin: 0;
+ 
 }*/
 
 .card:hover {
@@ -218,12 +219,20 @@ background-color: rgb(199, 193, 193);
     align-items: start;
     justify-content: center;
   }
+   
+    .card:hover{
+      transform: scale(1.08);
+    }
+    
+  
   .card {
     border: 1px solid #ddd;
     padding: 10px;
     background: white;
     margin: 10px;
     margin-top: 10px;
+    transition: transform 0.3s ease;
+ 
     
   }
 
@@ -231,6 +240,7 @@ background-color: rgb(199, 193, 193);
     width: 25rem;
     border-radius: 0.5rem;
     overflow: hidden;
+    
   }
   
   .card-img-top {
