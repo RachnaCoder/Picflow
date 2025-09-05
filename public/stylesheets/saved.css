@@ -73,3 +73,10 @@ transition: opacity 0.3s ease-in-out;
 color: #0a0909;
 font-weight: 400px;
   }
+
+  /* for logo styling */
+  .img1{
+  width: 70px;
+  position: relative;
+  top: 10px;
+}
