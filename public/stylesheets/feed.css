@@ -30,8 +30,9 @@
 }
 
 .card-body{
-	font-size: 50px;
-	height: 25px;
+	font-size: 2rem;
+  text-align: center;
+  color: #0a0909;
 }
 
 /* navigation bar */
@@ -267,7 +268,12 @@ font-weight: 400px;
   
   
 
+.posted-by  p{
+font-size: 1rem;
+font-weight: 200;
 
+
+}
 
 
 
