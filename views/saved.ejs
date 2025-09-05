@@ -42,11 +42,15 @@
     <div class="card">
       <img src="/images/uploads/posts/<%= post.image %>" alt="" class ="saved-img">
 
-<form action="/saved-posts/<%= post._id %>?_method=DELETE" method="POST" style="display: inline;" > 
-  <button type="submit" >Delete</button>  
+<div class="upper">
+  <div class="hover-buttons">
+  <form action="/saved-posts/<%= post._id %>?_method=DELETE" method="POST" > <button type="submit" >Delete</button>  
    </form>
-
+  </div>
+</div>
+    <div class="card-body">
       <p><%= post.postText %></p>
+      </div>
     </div>
   <% }) %>
 </div>

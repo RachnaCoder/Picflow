@@ -30,9 +30,14 @@
 }
 
 .card-body{
-	font-size: 2rem;
+	height: 40px;
+  width :100%;
   text-align: center;
-  color: #0a0909;
+}
+
+.card-body h5{
+
+font-size: 1.5rem;
 }
 
 /* navigation bar */

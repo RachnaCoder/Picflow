@@ -190,7 +190,8 @@ background-color: rgb(199, 193, 193);
   
 }
 
-/* Optional: Nice button styling */
+/*  Nice button styling */
+
 .logout-btn, .home-btn {
   background: #f30404;
   color: #fff;
@@ -206,9 +207,6 @@ background-color: rgb(199, 193, 193);
 
 
   
-
-
-
   .button{
     background-color:#f30d19; 
     padding :8px;
@@ -327,24 +325,7 @@ background-color: rgb(199, 193, 193);
     color: #0a0a0a;
   }
   
-  .menu-icon{
-    width: 30px;
-height: 30px;
-right: 0;
-bottom: 0;
-position: absolute;
-display: flex;
-align-items: center;
-justify-content: center;
-  }
-
-  .menu-icon i{
-    font-size: 20px;
-    height: 20px;
-    width: 20px;
-    color: black; 
-
-  }
+  
   
 .upload-btn{
 
