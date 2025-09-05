@@ -28,21 +28,25 @@
   </div>
   </div>
 
-
  <!-- for save button and download -->
   
   <div class="post-container">
-    <% posts.forEach(function(post){ %>
+   <% posts.forEach(function(post){ %>
       <div class="card">
         <div class="img-wrapper">
           <img src="/images/uploads/posts/<%= post.image %>" class="feed-img" alt="post image" />
           
-
           <div class="upper">
           <div class="hover-buttons">
             <form action="/save-post/<%= post._id %>" method="POST">
               <button type="submit" class="save-btn">Save</button>
             </form>
+
+
+            <a href="/images/uploads/posts/<%= post.image %>" download="post-<%= post._id %>.jpg">
+            <button class ="download-btn">Download</button>
+            </a>
+
           </div>
           <p>Posted by @<%= post.user.username %></p>
        </div>

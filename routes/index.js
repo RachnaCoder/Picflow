@@ -2,6 +2,7 @@
 
 var express = require('express');
 var path = require("path");
+var methodOverride =  require('method-override');
 
 const app = express();
 
@@ -13,7 +14,7 @@ app.use('/images/uploads', express.static(path.join(__dirname, 'public/images/up
 
 app.use('/uploads', express.static('uploads'));
 
-
+app.use(methodOverride('_method'));
 // ... rest of your code
 var router = express.Router();
 const usermodel = require("./users");
@@ -65,7 +66,6 @@ router.post("/upload", isLoggedIn, upload.single("file"), async function (req, r
   const post = await postmodel.create({
       postText: req.body.text,
       image: req.file.filename, 
-      Category : req.body.Category,
       user: user._id,
       createdAt: new Date(), // optional, Mongoose sets this automatically
   });
@@ -94,16 +94,15 @@ router.get("/search-category", (req, res) => {
 
 //////for changing profile image //////
 
-app.post("/uploadprofile",isLoggedIn, uploadPro.single("image"),  async function(req, res, next){
+router.post("/uploadprofile",isLoggedIn, uploadPro.single("file"),  async function(req, res, next){
   
   //res.send("uploaded");
   const user = await usermodel.findOne({username: req.session.passport.user});
 
   
-  user.profileImage =  req.file.filename;
+  user.dp =  req.file.filename;
 await user.save();
    
-
  res.redirect("/profile"); // Go back to profile page
 });
 
@@ -168,6 +167,25 @@ catch(err){
 
 }
 });
+
+// Add this route to your router for deleting the post from savedpost
+
+router.delete("/saved-posts/:postId", isLoggedIn, async (req, res) => {
+  try {
+    const user = await usermodel.findById(req.user._id);
+    const postId = req.params.postId;
+    
+    // Remove postId from savedPosts array
+    user.savedPosts = user.savedPosts.filter(id => id.toString() !== postId);
+    await user.save();
+    
+    res.redirect("/saved-posts"); // Redirect back to saved posts page
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Could not delete saved post");
+  }
+});
+
 
 
 router.post("/register", function(req,res){

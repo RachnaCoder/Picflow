@@ -36,13 +36,16 @@
 </div>
 
 
-
-
 <h2>Your Saved Posts</h2>
 <div class="saved-container">
   <% savedPosts.forEach(post => { %>
     <div class="card">
       <img src="/images/uploads/posts/<%= post.image %>" alt="" class ="saved-img">
+
+<form action="/saved-posts/<%= post._id %>?_method=DELETE" method="POST" style="display: inline;" > 
+  <button type="submit" >Delete</button>  
+   </form>
+
       <p><%= post.postText %></p>
     </div>
   <% }) %>
