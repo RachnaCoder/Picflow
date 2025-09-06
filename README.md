@@ -74,9 +74,9 @@ Register a new user, log in, and start sharing and exploring images!
 Images
 Here are some screenshots from the PicFlow website:
 
-![Login Page]Screenshot 2025-09-06 180650.png)  
-![Home Feed](Screenshot 2025-09-06 180707.png)  
-![User Profile](Screenshot 2025-09-06 180725.png)  
+![Login Page]([Screenshot 2025-09-06 180650.png](https://github.com/RachnaCoder/Picflow/blob/a023c51019dc4d5b3c901cdbcad3561381ce57ab/Screenshot%202025-09-06%20180650.png))  
+![Home Feed]([Screenshot 2025-09-06 180707.png](https://github.com/RachnaCoder/Picflow/blob/a023c51019dc4d5b3c901cdbcad3561381ce57ab/Screenshot%202025-09-06%20180707.png))  
+![User Profile]([Screenshot 2025-09-06 180725.png](https://github.com/RachnaCoder/Picflow/blob/a023c51019dc4d5b3c901cdbcad3561381ce57ab/Screenshot%202025-09-06%20180725.png))  
 
 
 Created by RachnaCoder — feel free to reach out!
